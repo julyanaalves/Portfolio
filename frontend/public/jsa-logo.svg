@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Monograma JSA">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#A78BFA"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+  </defs>
+  <!-- Monograma centralizado: ainda mais alto e um pouco mais estreito, itálico e sem negrito -->
+  <g transform="translate(128 128) scale(0.84 2.30)">
+  <text x="0" y="0" dy="6" text-anchor="middle" dominant-baseline="central"
+          font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial"
+          font-size="112" font-weight="600" font-style="italic" letter-spacing="-6" fill="url(#g)">
+      &lt;JSA&gt;
+    </text>
+  </g>
+</svg>

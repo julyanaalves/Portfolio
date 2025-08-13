@@ -1,6 +1,7 @@
 {
   "nome": "JULYANA DOS SANTOS ALVES",
   "titulo": "ESTUDANTE DE CIÊNCIA DA COMPUTAÇÃO",
+  "localizacao": "Recife-PE",
   "resumo": "Estudante de Ciência da Computação na UFPE, com formação técnica em Informática pelo IFBA. Experiência em suporte técnico e infraestrutura, além de interesse em desenvolvimento de software, especificamente em soluções inovadoras. Proativa, com boa capacidade analítica e possuo amplo conhecimento em tecnologia. Busco oportunidades de estágio na área de tecnologia, com disponibilidade para vagas regulares e afirmativas (PCD).",
   "contatos": [
     {
@@ -15,6 +16,11 @@
       "tipo": "LinkedIn",
       "valor": "linkedin.com/in/julyana-s-alves",
       "url": "https://www.linkedin.com/in/julyana-s-alves"
+    },
+    {
+      "tipo": "GitHub",
+      "valor": "github.com/julyanaalves",
+      "url": "https://github.com/julyanaalves"
     }
   ],
   "habilidades": [
@@ -73,29 +79,21 @@
       "periodo": "2018 - 2022"
     }
   ],
-  "links": [
-    {
-      "label": "GitHub",
-      "url": "https://github.com/julyanaalves"
-    }
-  ],
   "projetos": [
     {
       "nome": "Víveres",
       "descricao": "Aplicativo para gestão e doação de alimentos, conectando estabelecimentos com excedentes a pessoas e instituições necessitadas. Foco em reduzir desperdício, facilitar o match entre oferta e demanda e promover impacto social.",
       "tecnologias": ["React Native", "TypeScript", "Expo", "Node.js", "REST"],
       "links": {
-        "github": "https://github.com/julyanaalves/Viveres",
-        "demo": "https://expo.dev/preview/viveres"
+        "github": "https://github.com/julyanaalves/Viveres"
       }
     },
     {
       "nome": "Clínica Odontológica",
       "descricao": "Sistema para uma clínica odontológica com cadastro de pacientes, agendamento de consultas e prontuário básico. Inclui autenticação e perfis de acesso para a equipe.",
-      "tecnologias": ["React", "TypeScript", "Flask", "Python", "PostgreSQL", "TailwindCSS"],
+      "tecnologias": ["React", "TypeScript", "Flask", "Python", "RabbitMQ"],
       "links": {
-        "github": "https://github.com/SEU-ORG-OU-USUARIO/clinica-odontologica",
-        "demo": "https://seu-dominio-ou-demo.com/clinica"
+        "github": "https://github.com/marisfreire/iesi_projeto/"
       }
     }
   ]

@@ -4,6 +4,7 @@ interface Profile {
   nome: string
   titulo: string
   resumo: string
+  localizacao?: string
   contatos: { tipo: string; valor: string; url?: string }[]
   habilidades: string[]
   experiencias: { cargo: string; empresa: string; periodo: string; descricao: string[] }[]
@@ -40,7 +41,10 @@ export default function App() {
       {/* NAVBAR FIXA */}
       <nav className="fixed top-0 inset-x-0 z-50 backdrop-blur bg-background/70 border-b border-white/10">
         <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
-          <a href="#sobre" className="font-semibold text-white/90 hover:text-white">{profile.nome.split(' ')[0]}</a>
+          <a href="#sobre" className="flex items-center gap-2 group">
+            <img src="/jsa-logo.svg" alt="Logo JSA" className="h-7 w-auto" />
+            <span className="sr-only">Ir para o topo</span>
+          </a>
           <div className="flex items-center gap-6 text-sm">
             <a href="#sobre" className="text-slate-300 hover:text-white">Sobre</a>
             <a href="#experiencia" className="text-slate-300 hover:text-white">Experiência</a>
@@ -53,9 +57,10 @@ export default function App() {
       <header id="sobre" className="max-w-5xl mx-auto px-6 pt-24 pb-12">
         <h1 className="text-3xl sm:text-4xl font-bold">{profile.nome}</h1>
         <p className="mt-1 text-primary font-medium">{profile.titulo}</p>
-        <p className="mt-4 max-w-3xl text-slate-300">{profile.resumo}</p>
+        <p className="text-slate-400 mt-1">{profile.localizacao || 'Recife-PE'}</p>
+  <p className="mt-4 text-slate-300 text-justify">{profile.resumo}</p>
 
-        <div className="mt-6 flex flex-wrap gap-3">
+  <div id="contato" className="mt-6 flex flex-wrap gap-3">
           {profile.contatos.map((c, i) => (
             <a
               key={i}
@@ -81,7 +86,7 @@ export default function App() {
                   <h3 className="text-lg font-semibold">{exp.cargo} • {exp.empresa}</h3>
                   <span className="text-sm text-slate-400">{exp.periodo}</span>
                 </div>
-                <ul className="list-disc pl-5 mt-3 space-y-1 text-slate-300">
+                <ul className="list-disc pl-5 mt-3 space-y-1 text-slate-300 text-justify">
                   {exp.descricao.map((d, j) => (
                     <li key={j}>{d}</li>
                   ))}
@@ -98,7 +103,7 @@ export default function App() {
               {profile.projetos.map((p, i) => (
                 <article key={i} className="bg-card/60 border border-white/10 rounded-xl p-5 flex flex-col">
                   <h3 className="text-lg font-semibold">{p.nome}</h3>
-                  <p className="mt-2 text-slate-300 whitespace-pre-line">{p.descricao}</p>
+                  <p className="mt-2 text-slate-300 text-justify whitespace-pre-line">{p.descricao}</p>
                   {p.tecnologias?.length > 0 && (
                     <div className="mt-3 flex flex-wrap gap-2">
                       {p.tecnologias.map((t, j) => (
@@ -148,23 +153,7 @@ export default function App() {
           </div>
         </section>
 
-        <section id="contato">
-          <h2 className="text-2xl font-semibold mb-4">Contato</h2>
-          <div className="flex flex-wrap gap-3">
-            {profile.contatos.map((c, i) => (
-              <a
-                key={i}
-                href={c.url || (c.tipo === 'Email' ? `mailto:${c.valor}` : c.tipo === 'Telefone' ? `tel:${c.valor}` : '#')}
-                className="px-3 py-1.5 rounded-full bg-card/60 border border-white/10 hover:border-primary/50 transition"
-                target={c.url ? '_blank' : undefined}
-                rel={c.url ? 'noreferrer noopener' : undefined}
-              >
-                <span className="text-slate-300 mr-2">{c.tipo}:</span>
-                <span className="text-white">{c.valor}</span>
-              </a>
-            ))}
-          </div>
-        </section>
+  {/* Seção de contato removida, contatos exibidos apenas no topo */}
 
         {profile.links && profile.links.length > 0 && (
           <section>
