@@ -1,0 +1,102 @@
+{
+  "nome": "JULYANA DOS SANTOS ALVES",
+  "titulo": "ESTUDANTE DE CIÊNCIA DA COMPUTAÇÃO",
+  "resumo": "Estudante de Ciência da Computação na UFPE, com formação técnica em Informática pelo IFBA. Experiência em suporte técnico e infraestrutura, além de interesse em desenvolvimento de software, especificamente em soluções inovadoras. Proativa, com boa capacidade analítica e possuo amplo conhecimento em tecnologia. Busco oportunidades de estágio na área de tecnologia, com disponibilidade para vagas regulares e afirmativas (PCD).",
+  "contatos": [
+    {
+      "tipo": "Email",
+      "valor": "jsa3@cin.ufpe.br"
+    },
+    {
+      "tipo": "Telefone",
+      "valor": "(73) 99824-3031"
+    },
+    {
+      "tipo": "LinkedIn",
+      "valor": "linkedin.com/in/julyana-s-alves",
+      "url": "https://www.linkedin.com/in/julyana-s-alves"
+    }
+  ],
+  "habilidades": [
+    "Python",
+    "C/C++",
+    "Javascript/Typescript",
+    "SQL",
+    "Java",
+    "HTML/CSS/PHP",
+    "Git/GitHub",
+    "Banco de Dados (SQL)",
+    "Metodologias Ágeis",
+    "Redes de Computadores",
+    "Sistemas Operacionais (Windows)",
+    "Resolução de Problemas",
+    "Pensamento Analítico",
+    "Trabalho em Equipe",
+    "Comunicação",
+    "Gerenciamento de Tempo",
+    "Criatividade",
+    "Aprendizado Rápido"
+  ],
+  "experiencias": [
+    {
+      "cargo": "Assistente Técnica",
+      "empresa": "Mini Preço",
+      "periodo": "Jun 2020 - Mar 2024",
+      "descricao": [
+        "Prestei suporte técnico completo a usuários internos, diagnosticando e resolvendo problemas de hardware, software e conectividade de rede.",
+        "Gerenciei o ciclo de vida dos equipamentos, realizando a montagem, configuração e manutenção de computadores e notebooks com sistemas operacionais Windows.",
+        "Garanti a continuidade das operações por meio da manutenção proativa da infraestrutura de Tl e suporte a rotinas de bancos de dados corporativos.",
+        "Desenvolvi forte capacidade de diagnóstico e resolução de problemas em ambientes Windows."
+      ]
+    },
+    {
+      "cargo": "Estagiária",
+      "empresa": "Teleinfo 2000",
+      "periodo": "Abr 2022 - Nov 2022",
+      "descricao": [
+        "Realizei a manutenção, montagem e configuração de computadores e notebooks para múltiplos clientes, com foco em assistência técnica especializada.",
+        "Instalei e configurei sistemas operacionais Windows (10 e 11) e softwares essenciais, além de diagnosticar e resolver problemas básicos de rede.",
+        "Orientei clientes sobre o uso de tecnologias e boas práticas de manutenção, aprimorando minhas habilidades de comunicação e atendimento técnico.",
+        "Apliquei técnicas de diagnóstico rápido de hardware e de atendimento eficaz para garantir a satisfação do cliente."
+      ]
+    }
+  ],
+  "formacao": [
+    {
+      "curso": "Bacharelado em Ciência da Computação",
+      "instituicao": "Universidade Federal de Pernambuco",
+      "periodo": "2024 - 2028"
+    },
+    {
+      "curso": "Técnico em Informática",
+      "instituicao": "Instituto Federal da Bahia",
+      "periodo": "2018 - 2022"
+    }
+  ],
+  "links": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/julyanaalves"
+    }
+  ],
+  "projetos": [
+    {
+      "nome": "Víveres",
+      "descricao": "Aplicativo para gestão e doação de alimentos, conectando estabelecimentos com excedentes a pessoas e instituições necessitadas. Foco em reduzir desperdício, facilitar o match entre oferta e demanda e promover impacto social.",
+      "tecnologias": ["React Native", "TypeScript", "Expo", "Node.js", "REST"],
+      "links": {
+        "github": "https://github.com/julyanaalves/Viveres",
+        "demo": "https://expo.dev/preview/viveres"
+      }
+    },
+    {
+      "nome": "Clínica Odontológica",
+      "descricao": "Sistema para uma clínica odontológica com cadastro de pacientes, agendamento de consultas e prontuário básico. Inclui autenticação e perfis de acesso para a equipe.",
+      "tecnologias": ["React", "TypeScript", "Flask", "Python", "PostgreSQL", "TailwindCSS"],
+      "links": {
+        "github": "https://github.com/SEU-ORG-OU-USUARIO/clinica-odontologica",
+        "demo": "https://seu-dominio-ou-demo.com/clinica"
+      }
+    }
+  ]
+}

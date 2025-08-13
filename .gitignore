@@ -1,0 +1,50 @@
+# === Frontend (Node/Vite) ===
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/.cache/
+frontend/.parcel-cache/
+frontend/.turbo/
+# TypeScript cache
+*.tsbuildinfo
+# Logs de gerenciadores
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# === Backend (Python/Flask) ===
+backend/.venv/
+backend/__pycache__/
+**/__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+backend/.pytest_cache/
+backend/.mypy_cache/
+backend/.ruff_cache/
+backend/.coverage
+backend/.coverage.*
+backend/coverage/
+backend/htmlcov/
+backend/.tox/
+backend/.env
+backend/.env.*
+
+# === Ambiente/geral ===
+.env
+.env.*
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+*.swp
+*.swo
+
+# === Logs ===
+logs/
+*.log
+
+# === Currículo (privado) ===
+/Currículo - Julyana dos Santos Alves.pdf
