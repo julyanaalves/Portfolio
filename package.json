@@ -1,0 +1,11 @@
+{
+  "name": "portfolio-root",
+  "private": true,
+  "scripts": {
+    "install": "npm --prefix frontend install",
+    "setup": "npm --prefix frontend install",
+    "dev": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "preview": "npm --prefix frontend run preview"
+  }
+}
