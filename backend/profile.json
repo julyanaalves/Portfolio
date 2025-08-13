@@ -43,6 +43,32 @@
     "Criatividade",
     "Aprendizado Rápido"
   ],
+  "habilidades_subtopicos": {
+    "Linguagens": [
+      "Python",
+      "C/C++",
+      "Javascript/Typescript",
+      "SQL",
+      "Java",
+      "HTML/CSS/PHP"
+    ],
+    "Tecnologias e Ferramentas": [
+      "Git/GitHub",
+      "Banco de Dados (SQL)",
+      "Metodologias Ágeis",
+      "Redes de Computadores",
+      "Sistemas Operacionais (Windows)"
+    ],
+    "Habilidades Interpessoais": [
+      "Resolução de Problemas",
+      "Pensamento Analítico",
+      "Trabalho em Equipe",
+      "Comunicação",
+      "Gerenciamento de Tempo",
+      "Criatividade",
+      "Aprendizado Rápido"
+    ]
+  },
   "experiencias": [
     {
       "cargo": "Assistente Técnica",

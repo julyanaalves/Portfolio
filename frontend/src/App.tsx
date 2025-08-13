@@ -7,6 +7,7 @@ interface Profile {
   localizacao?: string
   contatos: { tipo: string; valor: string; url?: string }[]
   habilidades: string[]
+  habilidades_subtopicos?: Record<string, string[]>
   experiencias: { cargo: string; empresa: string; periodo: string; descricao: string[] }[]
   formacao: { curso: string; instituicao: string; periodo: string }[]
   links?: { label: string; url: string }[]
@@ -133,11 +134,26 @@ export default function App() {
 
         <section>
           <h2 className="text-2xl font-semibold mb-4">Habilidades</h2>
-          <div className="flex flex-wrap gap-2">
-            {profile.habilidades.map((h, i) => (
-              <span key={i} className="px-3 py-1.5 rounded-full bg-card/60 border border-white/10">{h}</span>
-            ))}
-          </div>
+          {profile.habilidades_subtopicos ? (
+            <div className="grid gap-4 sm:grid-cols-3">
+              {Object.entries(profile.habilidades_subtopicos).map(([categoria, itens]) => (
+                <div key={categoria} className="bg-card/60 border border-white/10 rounded-xl p-4">
+                  <h3 className="font-medium mb-2">{categoria}</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {itens.map((h, i) => (
+                      <span key={i} className="px-3 py-1.5 rounded-full bg-background/70 border border-white/10 text-sm">{h}</span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="flex flex-wrap gap-2">
+              {profile.habilidades.map((h, i) => (
+                <span key={i} className="px-3 py-1.5 rounded-full bg-card/60 border border-white/10">{h}</span>
+              ))}
+            </div>
+          )}
         </section>
 
         <section>
