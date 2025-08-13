@@ -7,6 +7,7 @@
   "dev": "vite",
   "build": "vite build",
   "build:deploy": "vite build --mode deploy --base /~jsa3/",
+  "vercel-build": "vite build --mode deploy --base / && node scripts/copy-profile.cjs",
   "preview": "vite preview"
   },
   "dependencies": {
