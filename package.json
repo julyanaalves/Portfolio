@@ -5,7 +5,8 @@
     "install": "npm --prefix frontend install",
     "setup": "npm --prefix frontend install",
     "dev": "npm --prefix frontend run dev",
-    "build": "npm --prefix frontend run build",
+  "build": "npm --prefix frontend run build",
+  "build:deploy": "npm --prefix frontend run build:deploy && powershell -NoProfile -ExecutionPolicy Bypass -Command \"Copy-Item -Path 'backend/profile.json' -Destination 'frontend/dist/profile.json' -Force\"",
     "preview": "npm --prefix frontend run preview"
   }
 }

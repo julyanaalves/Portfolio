@@ -23,7 +23,10 @@ export default function App() {
   const [profile, setProfile] = useState<Profile | null>(null)
 
   useEffect(() => {
-    fetch('/api/profile')
+    // Em dev, usamos /api via proxy; em produção (deploy) podemos servir um JSON estático.
+    const isDeploy = import.meta.env.MODE === 'deploy'
+    const url = isDeploy ? './profile.json' : '/api/profile'
+    fetch(url)
       .then((r) => r.json())
       .then(setProfile)
       .catch(() => setProfile(null))
@@ -43,7 +46,7 @@ export default function App() {
       <nav className="fixed top-0 inset-x-0 z-50 backdrop-blur bg-background/70 border-b border-white/10">
         <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
           <a href="#sobre" className="flex items-center gap-2 group">
-            <img src="/jsa-logo.svg" alt="Logo JSA" className="h-7 w-auto" />
+            <img src="./jsa-logo.svg" alt="Logo JSA" className="h-7 w-auto" />
             <span className="sr-only">Ir para o topo</span>
           </a>
           <div className="flex items-center gap-6 text-sm">

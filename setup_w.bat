@@ -19,11 +19,13 @@ goto :menu
   echo   [1] Setup rápido (instalar dependências e iniciar)
   echo   [2] Apenas rodar (não instala dependências)
   echo   [3] Importar currículo (PDF -> backend\\profile.json)
+  echo   [4] Build para deploy (gera frontend\dist pronto para subir)
   echo   [0] Sair
   set /p "CHOICE=Digite 1, 2, 3 ou 0 e pressione ENTER: "
   if "%CHOICE%"=="1" goto setup_rapido
   if "%CHOICE%"=="2" goto apenas_rodar
   if "%CHOICE%"=="3" goto import_resume
+  if "%CHOICE%"=="4" goto build_deploy
   if "%CHOICE%"=="0" goto fim
   echo Opção inválida. Tente novamente.
   goto :menu
@@ -103,6 +105,22 @@ goto :menu
   )
   popd >nul
   echo Concluído! Abra backend\profile.json para revisar os dados extraídos.
+  goto :menu
+
+:build_deploy
+  call :verificar_ferramentas || goto :fim
+  echo.
+  echo Construindo o frontend em modo 'deploy' com base '/~jsa3/'...
+  pushd "%ROOT%" >nul
+  npm run -s build:deploy
+  if errorlevel 1 (
+    echo [ERRO] Falha no build de deploy do frontend.
+    popd >nul
+    goto :fim
+  )
+  popd >nul
+  echo Build gerado em: %ROOT%\frontend\dist
+  echo Faça upload dos arquivos de %ROOT%\frontend\dist para: https://www.cin.ufpe.br/~jsa3/
   goto :menu
 
 :verificar_ferramentas
